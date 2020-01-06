@@ -1,0 +1,22 @@
+db.sqlite3
+media/
+*/migrations/0*
+*.pyc
+*.log
+__pycache__/
+
+
+# virtualenv
+.venv
+venv/
+ENV/
+
+
+# VSCODE
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
