@@ -75,7 +75,7 @@ class DownloadPdf(View):
         pdf = render_to_pdf('pdf/certificate.html', context)
         if pdf:
             response = HttpResponse(pdf, content_type='application/pdf')
-            filename = "%s.pdf" %("dosya_adi")
+            filename = "%s.pdf" %("file_name")
             content = "inline; filename=%s" %(filename)
             download = request.GET.get("download")
             if download:
@@ -90,7 +90,7 @@ def pdf_direct_download(request):
     context = {'data1': 'Lorem, ipsum dolor.'}
     # Create a Django response object, and specify content_type as pdf
     response = HttpResponse(content_type='application/pdf')
-    response['Content-Disposition'] = 'attachment; filename="dosya_adi.pdf"'
+    response['Content-Disposition'] = 'attachment; filename="file_name.pdf"'
     # find the template and render it.
     template = get_template(template_path)
     html = template.render(context)
